@@ -28,7 +28,7 @@ while(numeriRandom.length < 5) {
 console.log(numeriRandom);
 const numeri = document.getElementById("numeri_casuali");
 
-numeri.innerHTML = numeriRandom
+numeri.innerHTML += numeriRandom
 
 
 // Da lì parte un timer di 30 secondi.
@@ -37,14 +37,14 @@ numeri.innerHTML = numeriRandom
 // controllo che quei numeri sono presinti nell'array di numeri generati
 // se sono presenti li ristampo nell'html
 
-setTimeout(hiddenNumeri, 30000);
+setTimeout(hiddenNumeri, 3000);
 
 function hiddenNumeri () {
     numeri.classList.add("hidden");
 }
 
 
-setTimeout(richiesta, 30100);
+setTimeout(richiesta, 3010);
 
 const scelta = [];
 
@@ -70,5 +70,8 @@ function richiesta () {
         numeri.classList.remove("hidden");
     }
     
+    if(scelta == ""){
+        alert("non ne hai indovinato nemmeno uno!")
+    }
 }
 
